@@ -1,17 +1,20 @@
 // *{
 //   border: 1px solid black;
 // }
+html{
+  scroll-behavior: smooth;
+}
 body {
   
   margin: 0;
   // background: rgb(150,146,214);
-  background-image: url('../../images/background.jpg');
-  // width: 100vw;
-  height: 100vw;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment:fixed;
-  background-position: center;
+  // background-image: url('../../images/background.jpg');
+  
+  // height: 100vw;
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // background-attachment:fixed;
+  // background-position: center;
   
 a{
     list-style-type: none;
@@ -23,6 +26,15 @@ a{
 .wrapper {
   width: 100%;
   height: 100%;
+  font-family: cursive;
+  a,button,input,textarea{
+    font-family: cursive;
+    border: none;
+
+  }
+  
+  
+
   
   // width: 1200px;
   .hedline{
@@ -70,17 +82,19 @@ a{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgba(112, 112, 104, 0.68);
+    background-color: #363022;
+
     position: relative;
     border: none;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+    
     
   }
   
   .nav  .nav-header {
     
     display: inline;
+    animation-name: fadeIn;
+      animation-duration: 4s;
   }
   
   .nav  .nav-header  .nav-title {
@@ -99,6 +113,7 @@ a{
   }
   
   .nav  .nav-links {
+    
     width: 50%;
     display: inline-flex;
     justify-content: flex-end;
@@ -106,6 +121,8 @@ a{
     font-size: 18px;
     border: none;
     border-radius: 0 0 10px 10px;
+    animation-name: fadeIn;
+      animation-duration: 4s;
   }
   
   .nav  .nav-links  a {
@@ -155,12 +172,13 @@ a{
       position: absolute;
       display: block;
       width: 100%;
-      background-color: rgba(112, 112, 104, 0.68);
+      background-color: rgba(31, 31, 10, 0.68);
       height: 0px;
       transition: all 0.3s ease-in;
       overflow-y: hidden;
       top: 50px;
       left: 0px;
+      z-index: 1;
     }
     .nav  .nav-links  a {
       display: block;
@@ -178,153 +196,203 @@ a{
   
   
 
-}
+
 
 
 
 
 //////////////////////////////////////
 .baner-conteiner{
-  
-  background-color: #efefef;
-  opacity: 0.9;
-  width: 50vw;
-  border-radius: 20px;
-  padding: 20px;
-  margin-left: 30px;
-  margin-top:40px;
-  .text-baner{
-    font-size: 40px;
-    .text{
+  display: flex;
+  height: 90vh;
+
+  .contact{
+    width: 10vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    background-color: #363022;
+    a{
+      padding-bottom: 40px;
+
+      img{
+        height: 30px;
+      }
+    }
+
+    .name-firm{
+      margin-left: 25px;
+      writing-mode: vertical-lr;
+      color:#857f71 ;
       font-size: 24px;
+      padding-bottom: 20vh;
+    }
+    
+  }
+  
+  .baner{
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    align-items:end;
+    padding-right: 5vw;
+    padding-bottom: 14vh;
+    justify-content: center;
+    background-image: url('../../images/back-baner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+   
+    .slogan{
+      width: 50vw;
+      font-size: 35px;
+      animation-name: fadeIn;
+      animation-duration: 4s;
+    }
+    
+    button{
+      display: flex;
+      cursor: pointer;
+      border-radius: 15px;
+      
+      border: none;
+      padding: 10px;
+      font-size: 18px;
+      background-color: #f56a07;
+      animation-name: fadeIn;
+      animation-duration: 4s;
+      a{
+        text-decoration: none;
+        color: #f8f4f4;
+      }
+      
     }
   }
 }
 
+.about{
+  background-color: #363022;
 
-.service{
-  margin-top: 20px;
-  display: grid;
-grid-template-columns: repeat(2, 1fr);
-// grid-template-rows: repeat(2, 1fr);
-grid-column-gap: 10px;
-grid-row-gap: 15px;
-justify-content: center;
-
-
-
-.service-item{
-  width: 70%;
-  display:flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: center;
-  
-  margin:0 auto;
-  padding: 10px;
-  border-radius: 10px;
-
-  .service-ul{
-    text-align: left;
+  .title-about{
+    height: 20vh;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    color: #f56a07;
+    font-size: 24px;
 
+    &::before{
+      color: #f8f4f4;
+      content: "ПРО";
+      padding-right: 10px;
+    }
     
   }
-  .service-li{
-   
-  }
- 
-  background-color: rgba(112, 112, 104, 0.68);
+  .info-about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    .title-info-about{
+      width: 50vw;
+      padding: 10px;
+      color: #f8f4f4;
+      font-size: 24px;
+      text-align: justify;
+      .text-info-about{
+        color: #857f71;
+        font-size: 0.8em;
+        padding-top: 15px;
+      }
+    }
+    .service{
+      display: flex;
+      flex-direction: column;
+      color: #f8f4f4;
+      font-size: 24px;
+      padding: 10px;
 
-  
-  .service-name{
-    font-size: 21px;
-    text-align: center;
-  }
-  .service-info{
-    font-size: 18px;
-  color: rgba(255, 255, 255, 0.897);
-  
+      .architecture{
+        display: flex;
+        align-items: center;
+        height: 80px;
+        background: url("../../images/arch-back.svg");
+        padding-left: 60px;
+        background-position: left;
+        background-repeat: no-repeat;
+      }
+
+      .reconstruction{
+        display: flex;
+        align-items: center;
+        height: 80px;
+        background: url("../../images/recon-back.svg");
+        padding-left: 60px;
+        background-position: left;
+        background-repeat: no-repeat;
+      }
+      .design{
+        display: flex;
+        align-items: center;
+        height: 80px;
+        background: url("../../images/design-back.svg");
+        padding-left: 60px;
+        background-position: left;
+        background-repeat: no-repeat;
+      }
+    }
+    .image-about{
+      width: 200px;
+      height: 200px;
+      img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      }
+    }
   }
 }
 
-}
-@media (max-width: 768px) {
-  .service{
-    grid-template-columns: repeat(1, 1fr);
-   
-  }
-}
-.adventages{
-margin-top: 20px;
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-// grid-template-rows: repeat(2, 1fr);
-grid-column-gap: 10px;
-grid-row-gap: 15px;
-justify-content: center;
-
-
-
-
-  .adventages-item{
-width: 190px;
-display:flex;
+.projects-wrapper{
+  background-color: #363022;
+display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-margin:0 auto;
-padding: 5px;
-border-radius: 10px;
-background-color: rgba(112, 112, 104, 0.68);
+  .title-projects{
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    color: #f56a07;
+    font-size: 24px;
 
-.adv-name{
-  font-size: 21px;
-  text-align: center;
-  
-}
-.adv-info{
-  font-size: 18px;
-  text-align: center;
-  color: rgba(255, 255, 255, 0.897);
-}
+    &::before{
+      color: #f8f4f4;
+      content: "НАШІ";
+      padding-right: 10px;
+    }
+      
   }
-
-  
-
-}
-@media (max-width: 768px) {
-  .adventages{
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 600px) {
-  .adventages{
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-
-
-.projects {
-  
+.projects{
   width: 100%;
-  // max-width: 1100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-  
-
-  .projects-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+.projects-item{
     margin: 5px;
     width: 350px;
     height: 450px;
     border: 1px solid #312d2d;
     border-radius: 15px;
     transition: 0.8s  ease-in-out;
-    cursor: pointer;
+    
 
     &:hover{
       box-shadow: 10px 10px 10px  rgba(33,33,33,0.6);
@@ -340,10 +408,13 @@ background-color: rgba(112, 112, 104, 0.68);
     }
 
   }
-
 }
 
+
 .all-project{
+  border: none;
+  background-color: #f56a07;
+  color: #f8f4f4;
   height: 45px;
   display: flex;
   justify-content: space-between;
@@ -368,34 +439,117 @@ background-color: rgba(112, 112, 104, 0.68);
     }
   }
 }
+}
+
+.adventages-title{
+  background-color: #363022;
+  height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    color: #f56a07;
+    font-size: 24px;
+
+    &::before{
+      color: #f8f4f4;
+      content: "НАШІ";
+      padding-right: 10px;
+    }
+}
+
+
+.adventages{
+  background-color: #363022;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+// grid-template-rows: repeat(2, 1fr);
+grid-column-gap: 10px;
+grid-row-gap: 15px;
+justify-content: center;
 
 
 
 
+  .adventages-item{
+width: 190px;
+display:flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin:0 auto;
+padding: 5px;
+border-radius: 10px;
 
 
+.adv-name{
+  font-size: 21px;
+  text-align: center;
+  color: #f56a07;
+}
+.adv-info{
+  font-size: 18px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.897);
+}
+  }
+
+  
+
+}
+
+@media (max-width: 768px) {
+  .adventages{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .adventages{
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 
 
+.price-title{
+  background-color: #363022;
+  height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f8f4f4;
+    
+    font-size: 24px;
+
+    &::before{
+     
+      color: #f56a07;
+      content: "ВАРТІСТЬ";
+      padding-right: 10px;
+    }
+}
 
 
 .tariff{
 display: flex;
 flex-direction: column;
 // width: 100vw;
+background-color: #363022;
 
 
 
 details{
   
-  background-color: rgba(112, 112, 104, 0.68);
+  background-color:#5a4b17;
   padding: 10px;
   margin: 10px;
   border-radius: 10px;
-  width: 90%;
+  width: 40vw;
   
   cursor: pointer;
 
+  
   summary{
+    
     list-style: none;
     display: flex;
     justify-content: space-between;
@@ -407,16 +561,15 @@ details{
     }
 
     .tariff-title {
-      
-      
+      width: 200px;
+     color: #f8f4f4;
       font-size: 30px;
-      transition: display 2s ease-in-out;
     
       
     }
     .tariff-price{
-      padding-left: 100px;
-      font-size: 35px;
+      padding-left: 1px;
+      font-size: 30px;
       font-weight: bold;
     }
     .chevron-right{
@@ -425,7 +578,7 @@ details{
   }
 
   .tariff-details {
-    
+    font-size: 18px;
     // width: 500px;
     background-color: #f8f4f4;
     padding-left: 10px;
@@ -455,6 +608,78 @@ details{
   }
 }
 }
+@media (max-width: 800px) {
+  .tariff{
+    details{
+      width: 90vw;
+  }
+  }
+}
+
+
+.title-feedback{
+  background-color: #363022;
+  height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    color: #f8f4f4;
+    font-size: 24px;
+
+    &::after{
+      color: #f56a07;
+      content: "+380 980 534 083";
+      margin-left: 20px;
+    }
+}
+.feedback-text{
+  background-color: #363022;
+  color: #f8f4f4;
+  text-align: center;
+  padding-bottom: 20px;
+}
+.feedback{
+  background-color: #363022;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  padding-left: 30px;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-bottom: 20px;
+  input{
+    width: 20%;
+    height: 20px;
+    font-size: 16px;
+    background-color: #5a4b17;
+    color: #efefef;
+  }
+  textarea{
+    width: 40%;
+    height: 50px;
+    font-size: 16px;
+    background-color: #5a4b17;
+    color: #efefef;
+  }
+
+  .btn-send-message{
+    border: none;
+  background-color: #f56a07;
+  color: #f8f4f4;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  border-radius: 20px;
+  margin-left: 40px;
+  
+  cursor: pointer;
+  }
+
+}
+}
 //анімація плавного появлення
 @-webkit-keyframes fadeIn {
   from {opacity: 0;} 
@@ -466,44 +691,6 @@ details{
   to {opacity:1 ;}
 }
 
-
-footer {
-  background-color: rgba(112, 112, 104, 0.68);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  .hedline-footer{
-    color: #f8f4f4;
-    font-size: 30px;
-    
-  }
-  .feedback {
-    
-    display: flex;
-    flex-wrap: wrap;
-    padding-top: 15px;
-    justify-content:space-between;
-    align-items:center;
-    
-
-    .phone-number{
-      color: #f8f4f4;
-      font-size: 25px;
-      padding-right: 30px;
-    }
-    .soc-media{
-      padding-left: 30px;
-      img{
-        width: 35px;
-        border-radius: 10px;
-        padding: 0px 5px;
-        
-      }
-    }
-  }
-}
 
 
 
