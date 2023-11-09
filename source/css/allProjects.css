@@ -1,0 +1,108 @@
+@charset "UTF-8";
+body {
+  background-color: #272727;
+  margin: 0;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+}
+.wrapper .name-firm {
+  text-align: center;
+  font-family: "Cormorant SC", serif;
+  font-size: 30px;
+  text-decoration: none;
+  color: #f8f4f4;
+  padding: 10px;
+  font-weight: 400;
+}
+.wrapper .name-firm a {
+  text-decoration: none;
+  color: #f8f4f4;
+}
+.wrapper .title-projects {
+  height: 20vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #f56a07;
+  font-size: 24px;
+}
+.wrapper .title-projects::before {
+  color: #f8f4f4;
+  content: "НАШІ";
+  padding-right: 10px;
+}
+.wrapper #myBtnContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+}
+.wrapper #myBtnContainer button {
+  font-size: 18px;
+  font-family: "Lora", serif;
+  background-color: #857f71;
+  border: none;
+  border-radius: 10px;
+}
+.wrapper #myBtnContainer button:focus {
+  background-color: #f56a07;
+}
+.wrapper .projects {
+  overflow: hidden;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  grid-row-gap: 15px;
+}
+.wrapper .projects .projects-item {
+  -ms-grid-row-align: center;
+  -ms-grid-column-align: center;
+  place-self: center;
+  margin: 5px;
+  width: 350px;
+  height: 450px;
+  border: 1px solid #312d2d;
+  border-radius: 15px;
+  -webkit-transition: 0.8s ease-in-out;
+  transition: 0.8s ease-in-out;
+  display: none;
+}
+.wrapper .projects .projects-item:hover {
+  -webkit-box-shadow: 10px 10px 10px rgba(33, 33, 33, 0.6);
+          box-shadow: 10px 10px 10px rgba(33, 33, 33, 0.6);
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+.wrapper .projects .projects-item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px;
+}
+.wrapper .projects .show {
+  display: block;
+}
+@media (max-width: 768px) {
+  .wrapper .projects-wrapper .projects {
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

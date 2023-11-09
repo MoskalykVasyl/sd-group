@@ -4,6 +4,7 @@ html {
 }
 
 body {
+  background-color: #272727;
   margin: 0;
 }
 body a {
@@ -13,38 +14,11 @@ body a {
 .wrapper {
   width: 100%;
   height: 100%;
-  font-family: cursive;
+  font-family: "Lora", serif;
 }
 .wrapper a, .wrapper button, .wrapper input, .wrapper textarea {
-  font-family: cursive;
+  font-family: "Lora", serif;
   border: none;
-}
-.wrapper .hedline {
-  padding-left: 20px;
-  padding-top: 50px;
-  font-size: 30px;
-  font-weight: bold;
-}
-.wrapper .hedline p {
-  font-size: 20px;
-  opacity: 0.7;
-}
-.wrapper .hedline-projects {
-  padding: 20px;
-  font-size: 30px;
-  background-color: rgba(112, 112, 104, 0.9);
-  margin: 20px;
-  border-radius: 20px;
-}
-.wrapper .hedline-price {
-  color: #f8f4f4;
-  padding-left: 20px;
-  padding-top: 50px;
-  font-size: 30px;
-  font-weight: bold;
-}
-.wrapper .hedline-price p {
-  font-size: 20px;
 }
 .wrapper .nav {
   height: 50px;
@@ -58,7 +32,6 @@ body a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-color: #363022;
   position: relative;
   border: none;
 }
@@ -75,6 +48,8 @@ body a {
   padding: 10px;
 }
 .wrapper .nav .nav-header .nav-title a {
+  font-family: "Cormorant SC", serif;
+  font-weight: 400;
   text-decoration: none;
   color: #fff;
 }
@@ -82,6 +57,8 @@ body a {
   display: none;
 }
 .wrapper .nav .nav-links {
+  font-family: "Lora", serif;
+  font-weight: 400;
   width: 50%;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -191,7 +168,6 @@ body a {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: end;
-  background-color: #363022;
 }
 .wrapper .baner-conteiner .contact a {
   padding-bottom: 40px;
@@ -200,6 +176,7 @@ body a {
   height: 30px;
 }
 .wrapper .baner-conteiner .contact .name-firm {
+  font-family: "Times New Roman", Times, serif;
   margin-left: 25px;
   -webkit-writing-mode: vertical-lr;
       -ms-writing-mode: tb-lr;
@@ -231,12 +208,20 @@ body a {
   background-position: top;
 }
 .wrapper .baner-conteiner .baner .slogan {
+  font-family: "Cormorant SC", serif;
+  font-weight: 700;
   width: 50vw;
   font-size: 35px;
   -webkit-animation-name: fadeIn;
           animation-name: fadeIn;
   -webkit-animation-duration: 4s;
           animation-duration: 4s;
+}
+.wrapper .baner-conteiner .baner .slogan::after {
+  font-family: "Lora", serif;
+  font-weight: 500;
+  font-style: italic;
+  content: "- Будинок мрії";
 }
 .wrapper .baner-conteiner .baner button {
   display: -webkit-box;
@@ -256,9 +241,6 @@ body a {
 .wrapper .baner-conteiner .baner button a {
   text-decoration: none;
   color: #f8f4f4;
-}
-.wrapper .about {
-  background-color: #363022;
 }
 .wrapper .about .title-about {
   height: 20vh;
@@ -367,7 +349,6 @@ body a {
      object-fit: cover;
 }
 .wrapper .projects-wrapper {
-  background-color: #363022;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -403,20 +384,16 @@ body a {
 }
 .wrapper .projects-wrapper .projects {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 10px;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  grid-row-gap: 15px;
 }
 .wrapper .projects-wrapper .projects .projects-item {
+  -ms-grid-row-align: center;
+  -ms-grid-column-align: center;
+  place-self: center;
   margin: 5px;
   width: 350px;
   height: 450px;
@@ -458,6 +435,10 @@ body a {
   margin-top: 20px;
   cursor: pointer;
 }
+.wrapper .projects-wrapper .all-project a {
+  text-decoration: none;
+  color: #f8f4f4;
+}
 .wrapper .projects-wrapper .all-project img {
   padding-left: 10px;
   padding-right: 5px;
@@ -469,7 +450,6 @@ body a {
           transform: translateX(5px);
 }
 .wrapper .adventages-title {
-  background-color: #363022;
   height: 20vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -489,7 +469,6 @@ body a {
   padding-right: 10px;
 }
 .wrapper .adventages {
-  background-color: #363022;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 10px 1fr 10px 1fr;
@@ -534,6 +513,10 @@ body a {
     -ms-grid-columns: (1fr)[2];
     grid-template-columns: repeat(2, 1fr);
   }
+  .wrapper .projects-wrapper .projects {
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 @media (max-width: 600px) {
   .wrapper .adventages {
@@ -542,7 +525,6 @@ body a {
   }
 }
 .wrapper .price-title {
-  background-color: #363022;
   height: 20vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -569,10 +551,9 @@ body a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #363022;
 }
 .wrapper .tariff details {
-  background-color: #5a4b17;
+  background-color: #939393;
   padding: 10px;
   margin: 10px;
   border-radius: 10px;
@@ -612,7 +593,7 @@ body a {
   font-size: 18px;
   background-color: #f8f4f4;
   padding-left: 10px;
-  padding-top: 1px;
+  padding-right: 5px;
   border-radius: 10px;
 }
 .wrapper .tariff details .tariff-details li {
@@ -630,7 +611,6 @@ body a {
   }
 }
 .wrapper .title-feedback {
-  background-color: #363022;
   height: 20vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -650,13 +630,25 @@ body a {
   margin-left: 20px;
 }
 .wrapper .feedback-text {
-  background-color: #363022;
   color: #f8f4f4;
   text-align: center;
   padding-bottom: 20px;
 }
+.wrapper .error-message {
+  color: #f8f4f4;
+  background-color: red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 40vw;
+  padding: 5px;
+  margin-bottom: 5px;
+  border-radius: 20px;
+}
 .wrapper .feedback {
-  background-color: #363022;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -676,15 +668,45 @@ body a {
   width: 20%;
   height: 20px;
   font-size: 16px;
-  background-color: #5a4b17;
+  background-color: #939393;
   color: #efefef;
+}
+.wrapper .feedback input::-webkit-input-placeholder {
+  color: #272727;
+}
+.wrapper .feedback input::-moz-placeholder {
+  color: #272727;
+}
+.wrapper .feedback input:-ms-input-placeholder {
+  color: #272727;
+}
+.wrapper .feedback input::-ms-input-placeholder {
+  color: #272727;
+}
+.wrapper .feedback input::placeholder {
+  color: #272727;
 }
 .wrapper .feedback textarea {
   width: 40%;
   height: 50px;
   font-size: 16px;
-  background-color: #5a4b17;
-  color: #efefef;
+  background-color: #939393;
+  color: #f8f4f4;
+}
+.wrapper .feedback textarea::-webkit-input-placeholder {
+  color: #272727;
+}
+.wrapper .feedback textarea::-moz-placeholder {
+  color: #272727;
+}
+.wrapper .feedback textarea:-ms-input-placeholder {
+  color: #272727;
+}
+.wrapper .feedback textarea::-ms-input-placeholder {
+  color: #272727;
+}
+.wrapper .feedback textarea::placeholder {
+  color: #272727;
 }
 .wrapper .feedback .btn-send-message {
   border: none;
@@ -704,6 +726,25 @@ body a {
   border-radius: 20px;
   margin-left: 40px;
   cursor: pointer;
+}
+.wrapper .feedback .btn-dis-send-message {
+  border: none;
+  background-color: #857f71;
+  color: #f8f4f4;
+  height: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 20px;
+  border-radius: 20px;
+  margin-left: 40px;
+  cursor: not-allowed;
 }
 
 @-webkit-keyframes fadeIn {

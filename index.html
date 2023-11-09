@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;1,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="source/css/style.css" />
     <link
       rel="stylesheet"
@@ -51,7 +57,7 @@
           /></a>
         </div>
         <div class="baner">
-          <div class="slogan">Sominare Domus - будинок мрії</div>
+          <div class="slogan">Sominare Domus </div>
           
           <button>
             <a href="#feedback">Зв'язатися</a>
@@ -109,7 +115,7 @@
           <img src="./images/project-item/item-6.jpg" alt="" />
         </div>
       </div>
-      <button class="all-project">Більше проєктів
+      <button class="all-project"><a href="allProjects.html">Більше проєктів</a>
         <img src="./images/arrow.svg" alt="" />
       </button>
     </div>
@@ -311,17 +317,17 @@
     <div id="feedback" class="title-feedback">
       Обговоримо Ваш проєкт?
     </div>
-    <div class="feedback-text">
+    <div id ="text-feedback" class="feedback-text">
       Подзвоніть нам, або заповніть форму і ми самі з Вами зв'яжимося 😉
     </div>
     <div class="feedback">
       
-        <input id="name" type="text" placeholder="Ім'я">
+        <input id="name"  type="text" placeholder="Ім'я">
       
-        <input id="number" type="text" placeholder="Номер телефону">
+        <input id="number"  type="text" placeholder="Номер телефону" >
       
-        <textarea id="message" name="text-message" id="text-message"  placeholder="Ведіть повідомлення...."></textarea>
-        <button onclick="sendEmail()" class="btn-send-message">Відправити</button>
+        <textarea id="message" onkeypress="disableBtn()" name="text-message" id="text-message"  placeholder="Ведіть повідомлення...."></textarea>
+        <button onclick="sendEmail()" id="btn-send-message" class="btn-dis-send-message"  >Відправити</button>
       
     </div>
     <script type="text/javascript"
@@ -333,6 +339,7 @@
    })();
 </script>
     <script src="./sendMessage.js"></script>
+    <script src="./checkForm.js"></script>
 
     </div>
   </body>

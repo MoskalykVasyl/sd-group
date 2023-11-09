@@ -1,3 +1,5 @@
+
+
 // *{
 //   border: 1px solid black;
 // }
@@ -5,7 +7,7 @@ html{
   scroll-behavior: smooth;
 }
 body {
-  
+  background-color: #272727;
   margin: 0;
   // background: rgb(150,146,214);
   // background-image: url('../../images/background.jpg');
@@ -26,9 +28,9 @@ a{
 .wrapper {
   width: 100%;
   height: 100%;
-  font-family: cursive;
+  font-family: 'Lora', serif;
   a,button,input,textarea{
-    font-family: cursive;
+    font-family: 'Lora', serif;
     border: none;
 
   }
@@ -37,39 +39,7 @@ a{
 
   
   // width: 1200px;
-  .hedline{
-    
-    padding-left: 20px;
-    padding-top: 50px;
-    font-size: 30px;
-    font-weight: bold;
-
-    p{
-      font-size: 20px;
-      opacity: 0.7;
-    }
-    
-  }
-  .hedline-projects{
-    padding: 20px;
-    font-size: 30px;
-    background-color: rgba(112, 112, 104, 0.9);
-    margin: 20px;
-    border-radius: 20px;
-  }
-  .hedline-price{
-    color: #f8f4f4;
-    padding-left: 20px;
-    padding-top: 50px;
-    font-size: 30px;
-    font-weight: bold;
-
-    p{
-      font-size: 20px;
-      
-    }
-    
-  }
+  
 
   
 
@@ -82,7 +52,7 @@ a{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #363022;
+    
 
     position: relative;
     border: none;
@@ -104,6 +74,8 @@ a{
     padding: 10px;
   }
   .nav  .nav-header  .nav-title a{
+    font-family: 'Cormorant SC', serif;
+    font-weight: 400;
     text-decoration: none;
     color: #fff;
   }
@@ -113,7 +85,8 @@ a{
   }
   
   .nav  .nav-links {
-    
+    font-family: 'Lora', serif;
+    font-weight: 400;
     width: 50%;
     display: inline-flex;
     justify-content: flex-end;
@@ -212,7 +185,6 @@ a{
     flex-direction: column;
     align-items: center;
     justify-content: end;
-    background-color: #363022;
     a{
       padding-bottom: 40px;
 
@@ -222,6 +194,7 @@ a{
     }
 
     .name-firm{
+      font-family:'Times New Roman', Times, serif;
       margin-left: 25px;
       writing-mode: vertical-lr;
       color:#857f71 ;
@@ -245,10 +218,19 @@ a{
     background-position: top;
    
     .slogan{
+      font-family: 'Cormorant SC', serif;
+      font-weight: 700;
       width: 50vw;
       font-size: 35px;
       animation-name: fadeIn;
       animation-duration: 4s;
+
+      &::after{
+         font-family: 'Lora', serif;
+         font-weight: 500;
+         font-style: italic;
+         content: '- Будинок мрії';
+      }
     }
     
     button{
@@ -272,7 +254,7 @@ a{
 }
 
 .about{
-  background-color: #363022;
+  
 
   .title-about{
     height: 20vh;
@@ -357,7 +339,7 @@ a{
 }
 
 .projects-wrapper{
-  background-color: #363022;
+ 
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -380,12 +362,19 @@ align-items: center;
   }
 .projects{
   width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    flex-wrap: wrap;
+  display: grid;
+grid-template-columns: repeat(3, 1fr);
+
+
+grid-row-gap: 15px;
+
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // gap: 10px;
+    // flex-wrap: wrap;
 .projects-item{
+  place-self: center;
     margin: 5px;
     width: 350px;
     height: 450px;
@@ -425,7 +414,10 @@ align-items: center;
   margin-top: 20px;
   cursor: pointer;
   
-  
+  a{
+    text-decoration: none;
+    color: #f8f4f4;
+  }
   img{
     padding-left: 10px;
     padding-right: 5px;
@@ -442,7 +434,7 @@ align-items: center;
 }
 
 .adventages-title{
-  background-color: #363022;
+  
   height: 20vh;
     display: flex;
     justify-content: center;
@@ -460,7 +452,7 @@ align-items: center;
 
 
 .adventages{
-  background-color: #363022;
+ 
 display: grid;
 grid-template-columns: repeat(3, 1fr);
 // grid-template-rows: repeat(2, 1fr);
@@ -502,6 +494,11 @@ border-radius: 10px;
   .adventages{
     grid-template-columns: repeat(2, 1fr);
   }
+  .projects-wrapper{
+    .projects{
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
 }
 @media (max-width: 600px) {
   .adventages{
@@ -511,7 +508,7 @@ border-radius: 10px;
 
 
 .price-title{
-  background-color: #363022;
+  
   height: 20vh;
     display: flex;
     justify-content: center;
@@ -533,13 +530,13 @@ border-radius: 10px;
 display: flex;
 flex-direction: column;
 // width: 100vw;
-background-color: #363022;
+
 
 
 
 details{
   
-  background-color:#5a4b17;
+  background-color:#939393;
   padding: 10px;
   margin: 10px;
   border-radius: 10px;
@@ -582,7 +579,8 @@ details{
     // width: 500px;
     background-color: #f8f4f4;
     padding-left: 10px;
-    padding-top: 1px;
+    padding-right: 5px;
+   
     border-radius: 10px;
     
     
@@ -618,7 +616,7 @@ details{
 
 
 .title-feedback{
-  background-color: #363022;
+  
   height: 20vh;
     display: flex;
     justify-content: center;
@@ -634,13 +632,24 @@ details{
     }
 }
 .feedback-text{
-  background-color: #363022;
+  
   color: #f8f4f4;
   text-align: center;
   padding-bottom: 20px;
 }
+.error-message{
+  color: #f8f4f4;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  // align-items: center;
+  width: 40vw;
+  padding: 5px;
+  margin-bottom: 5px;
+  border-radius: 20px;
+}
 .feedback{
-  background-color: #363022;
+ 
   display: flex;
   justify-content: start;
   align-items: start;
@@ -652,15 +661,21 @@ details{
     width: 20%;
     height: 20px;
     font-size: 16px;
-    background-color: #5a4b17;
+    background-color:#939393;
     color: #efefef;
+    &::placeholder{
+      color: #272727;
+    }
   }
   textarea{
     width: 40%;
     height: 50px;
     font-size: 16px;
-    background-color: #5a4b17;
-    color: #efefef;
+    background-color:#939393;
+    color: #f8f4f4;
+    &::placeholder{
+      color: #272727;
+    }
   }
 
   .btn-send-message{
@@ -675,9 +690,26 @@ details{
   border-radius: 20px;
   margin-left: 40px;
   
+  
   cursor: pointer;
-  }
 
+  }
+  .btn-dis-send-message{
+    border: none;
+  background-color: #857f71;
+  color: #f8f4f4;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  border-radius: 20px;
+  margin-left: 40px;
+  
+  
+  cursor: not-allowed;
+  
+  }
 }
 }
 //анімація плавного появлення
